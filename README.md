@@ -31,7 +31,7 @@ go test ./...
 ## Docker
 
 My Restaurant is very easy to install and run in a Docker container.
-To do so, follow the steps below to succeed:
+For this, follow the steps below:
 
 To build the container:
 ```sh
@@ -62,7 +62,7 @@ This command will generate a My Restaurant application binary to run anywhere.
 ```sh
 make test
 ```
-This command will run all existing tests in the My Restaurant application to validate that everything is OK with its execution.
+This command will run all existing tests in the My Restaurant application to validate that everything is OK with the execution.
 
 ```sh
 make docker-build
@@ -76,7 +76,7 @@ This command will run the generated docker image to run the My Restaurant applic
 
 ## Notes
 
-As it is a language in which there is no architectural "rule", I used some community premises and adhered to some good market practices, which I have been improving since 2018 when I had my first contact with the language in a monolith.
+As it is a language in which there is no architectural "rule", I used some community premises and add to some good market practices, which I have been improving since 2018 when I had my first contact with the language in a monolith.
 
 ## License
 
