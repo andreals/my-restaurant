@@ -1,89 +1,82 @@
-# Capital Gain
-## _Code Challenge: Ganho de Capital_
+# My Restaurant
+## _Code Challenge: My Restaurant_
 
-Capital Gain, ou Ganho de Capital é um "code challenge" oferecido pela Nubank como step de um processo seletivo de Engenharia de Software.
+My Restaurant is a "code challenge" offered by Checkmarx as a step in a Software Engineering selection process.
 
-A aplicação CLI tem como responsabilidade calcular o imposto a ser pago sobre lucros ou prejuízos de operações no mercado financeiro de ações.
+The CLI application is responsible for creating/loading a restaurant, placing orders and preparing table orders.
 
 ## Stack
 
-Capital Gain usa como tech stack:
+My Restaurant uses as a technology stack:
 - Golang
-- Docker (opcional)
-- Make (opcional)
-
-## Tech Decisions
-
-As decisões técnicas utilizadas para o desenvolvimento da aplicação foram de criar uma aplicação que fosse facilmente compreendida, para isso utilizei uma linguagem altamente utilizada na atualidade (golang) e de fácil entendimento.
-Além disso, utilizei algumas das boas práticas de clean code e as premissas do [Uber - Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md).
-Apliquei o desenvolvimento baseado em TDD para que os casos de testes já informados no code challenge pudessem me ajudar na resolução do problema, a fim de evitar bugs de regressão e facilitar no andamento da solução.
-Utilizei um "scaffold" baseado em DDD para que o projeto possa evoluir futuramente, porém de forma bem "lite" pois trata-se de uma aplicação CLI, na qual não há interações com camadas de transport.
+- Docker (optional)
+- Make (optional)
 
 ## Installation
 
-A aplicação necessite de um ambiente com [Golang](https://go.dev/doc/install) 1.17+ para rodar.
+The application needs an environment with [Golang](https://go.dev/doc/install) 1.17+.
 
-Instale a dependência e rode o comando:
+Install the dependency and run the command:
 ```sh
 go run cmd/cli/main.go
 ```
 
 ## Tests
 
-Para rodar os testes da aplicação, basta rodar o comando na raiz do projeto:
+To run the application tests, just run the command in the project root:
 ```sh
 go test ./...
 ```
 
 ## Docker
 
-Capital Gain é muito fácil de instalar e rodar em um container Docker.
-Para isso, siga os passos abaixo para ter sucesso:
+My Restaurant is very easy to install and run in a Docker container.
+To do so, follow the steps below to succeed:
 
-Para buildar o container:
+To build the container:
 ```sh
-docker build -t capital-gain . -f ./build/Dockerfile
+docker build -t restaurant . -f ./build/Dockerfile
 ```
 
-Para rodar o container:
+To run the container:
 
 ```sh
-docker run -it capital-gain
+docker run -it restaurant
 ```
 
 ## Makefile
 
-Uma alternativa para rodar, é usando o Makefile que encontra-se na raiz do projeto.
+An alternative to run it is using the Makefile that is in the root of the project.
 
-Comandos existentes:
+Existing commands:
 ```sh
 make run
 ```
-Esse comando vai rodar a aplicação Capital Gain em Go na sua máquina local.
+This command will run the My Restaurant application in Go on your local machine.
 
 ```sh
 make build
 ```
-Esse comando vai gerar um binário da aplicação Capital Gain para ser executado em qualquer local.
+This command will generate a My Restaurant application binary to run anywhere.
 
 ```sh
 make test
 ```
-Esse comando vai rodar todos os testes existentes na aplicação Capital Gain para validar que tudo esteja OK com sua execução (inclusive os casos de teste do code challenge).
+This command will run all existing tests in the My Restaurant application to validate that everything is OK with its execution.
 
 ```sh
 make docker-build
 ```
-Esse comando vai buildar uma nova imagem do docker com o ambiente pronto para rodar a aplicação Capital Gain.
+This command will build a new docker image with the environment ready to run the My Restaurant application.
 
 ```sh
 make docker-run
 ```
-Esse comando vai rodar a imagem do docker gerada para executar a aplicação Capital Gain.
+This command will run the generated docker image to run the My Restaurant application.
 
 ## Notes
 
-Por se tratar de uma linguagem em que não há uma "regra" de arquitetura, utilizei algumas premissas da comunidade e aderente à algumas boas práticas de mercado, nas quais venho aprimorando desde 2018 quando tive o primeiro contato com a linguagem em um monolito.
+As it is a language in which there is no architectural "rule", I used some community premises and adhered to some good market practices, which I have been improving since 2018 when I had my first contact with the language in a monolith.
 
 ## License
 
